@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoListItem = ({videoEach, onVideoSelect}) => {
+const VideoListItem = ({videoEach, onVideoSelect}) => {//onVideoSelect 存的是callback function
 	// '{video}' is equal to 'const video = props.video';
 
 	const imgUrl = videoEach.snippet.thumbnails.default.url;

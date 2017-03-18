@@ -18,7 +18,7 @@ class App extends Component {
 			selectVideo: null
 		};
 
-		this.videoSearch('wbc');
+		this.videoSearch('宇宙人');
 	}
 
 	videoSearch(term) {
@@ -32,13 +32,13 @@ class App extends Component {
 
 	render() {
 		const videoSearch = lodash.debounce(term => this.videoSearch(term), 400);
-
+		
 		return (
 			<div>
 				<SearchBar onSearchTermChange={videoSearch} />
 				<VideoDetail video={this.state.selectVideo} />
 				<VideoList 
-					onVideoSelect={selectVideo => this.setState({selectVideo})}// update a state,
+					onVideoSelect={selectVideo => this.setState({selectVideo})}// update a state, It's callback function.
 					videoList={this.state.videoList} />
 			</div>
 		);
